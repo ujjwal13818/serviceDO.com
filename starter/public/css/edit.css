@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 8vh;
+}
+.nav-content{
+    color: White;
+    font-size: 1.5rem;
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: 0;
+}
+a{
+    text-decoration: none;
+    color: White;
+}
+.logo>img{
+    height: 5vh;
+    width: 3vw;
+}
+.company{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 1vw;
+}
+.welcome{
+    color: white;
+    margin-top: 1vh;
+    font-size: 1.3rem;
+    margin-left: 2vw;
+}
+a:hover{
+    color: black;
+    transform: scale(1.05);
+}
+.nav-link.active {
+    color: black;
+  }
+  form{
+    margin-top: 2vh;
+    width: 60vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+  label{
+    padding-left: .7vw;
+  }
+  form>button{
+    width: 20%;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .btn:hover{
+    background-color: green;
+    font-weight: 400;
+  }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="/cssbt/bootstrap.css">
+    <link rel="stylesheet" href="/css/home.css" />
+    </head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="padding-left: 2rem; font-size: larger;">
+        <div class="logo">
+            <img src="/images/Screenshot (870).png" alt="">
+        </div>
+        <div class="company">serviceDO.com</div>
+        <div class="welcome">
+            <%userdata.forEach(data => {%>
+                <p class="welcome">Welcome <%= data.fname %></p>
+            <%})%>
+        </div>
+          <div class="nav-content">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Jobs near me</a>
+            <a class="nav-link" href="#">Chat</a>
+            <a class="nav-link" href="/profile">Edit Profile</a>
+            <a class="nav-link" href="#">Contact us</a>
+          </div>
+      </nav>
+    <script src="/jsbt/bootstrap.bundle.js"></script>
+    <script src="/js/home.js"></script>
+</body>
+</html>

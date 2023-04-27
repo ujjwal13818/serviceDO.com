@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/employer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title text-center py-4"> Register for free</h1>
+        <form action="/employer" method="post">
+            <div class="content">
+                <div class="input-box">
+                    <label for="name"> Full Name </label>
+                    <input type="text" placeholder="Enter full name" name="name" required>
+                </div>
+                <div class="input-box">
+                    <label for="Email"> Email  </label>
+                    <input type="email" placeholder="Enter your valid email address" name="email" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="Address"> <address>Address</address></label>
+                    <input type="text" placeholder="Enter the address" name="address" required>
+                </div>
+                <div class="input-box">
+                    <label for="phonenumber"> Phone number</label>
+                    <input type="tel" placeholder="Enter phone number" name="phone" required>
+                </div>
+                <div class="input-box">
+                    <label for="Quantity">Workers required</label>
+                    <input type="number" id="quantity" placeholder="Enter no. of Workers required" step="1"  name="quantity" min="1" max="200" required>
+                </div>
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter a strong password" name="password" required>
+                </div>
+                <div class="input-box">
+                    <label for="cpassword"> Confirm password</label>
+                    <input type="password" placeholder="Confirm Password" name="cpassword" required>
+                </div>
+                <div class="input-box">
+                    <label for="skills"> Skill required </label>
+                    <input type="text" placeholder="Type the skills required" name="skills" required>
+                </div>
+                <div class="input-box">
+                    <label for="salary">Salary </label>
+                    <input type="number" placeholder="Salary provided" min="100" max="10000" step="1" name="salary" id="salary" required="required">
+                </div>
+                
+                <span class="gender-title">Gender</span>
+                <div class="gender-category">
+                    <input type="radio" name="gender" id="male">
+                    <label for="gender">Male</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="gender">Female</label>
+                    <input type="radio" name="gender" id="other">
+                    <label for="gender">Other</label>
+                 </div>
+<div class="alert">
+    <p> By clicking Register, you agree to SERVICE DO's <a href="a">Terms,</a> <a href="a"> Privacy policy,</a> and <a href="a"> Cookies policy</a>
+    You will soon recieve notifications from our side.</p>
+</div>
+<div class="bn">
+    <button type="submit"> <h3>Register Now</h3></button>
+  </div>        
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

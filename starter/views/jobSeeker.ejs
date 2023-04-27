@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>serviceDO.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/cssbt/bootstrap.css">
+<link rel="stylesheet" href="/css/jobseeker.css" />
+</head>
+<body>
+    <h1>serviceDO.com</h1>
+          <div class="form-area">
+            <div class="title"> Register Yourself</div>
+            <div class="details">
+            <form action="/jobseeker" method="post" enctype="multipart/form-data">
+                <div class="name">
+                    <div class="first input">
+                        <label for="Full Name" class="label">Full Name:</label>
+                        <input type="text" class="first-name" name="fname">
+                    </div>
+                    <div class="last input">
+                        <label for="Password" class="label">Password:</label>
+                        <input type="password" class="Last-name" name="password">
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="email input">
+                        <label for="email">Email:</label>
+                        <input type="email" class="email-input" name="email">
+                    </div>
+                    <div class="phone input">
+                        <label for="phone">Phone No.:</label>
+                        <input type="text" class="phone-input" name="phone">
+                    </div>
+                </div>
+                <div class="addresss input">
+                    <label for="Address input">Locality:</label>
+                    <input type="text" class="address-input" name="address">
+                </div>
+                <div class="skills input">
+                    <label for="skills">What do you do?</label>
+                    <input type="text" class="skill-input" name="skills">
+                </div>
+                <div class="exp non-input">
+                 <label for="exp" class="exp-q">Would you like to share your contact number to your employer?</label>
+                    <input type="radio" class="exp" name="radio">
+                    <label for="yes" class="yes">Yes</label>
+                    <input type="radio" class="exp" name="radio">
+                    <label for="no">No</label>
+                </div>
+                <div class="resume non-input">
+                    <label for="resume">Resume:</label>
+                    <input type="file" class="resume" name="resume">
+                </div>
+                <div class="disclaim non-input">
+                    <input type="checkbox" class="checkbox" name="checkbox">
+                    <label for="disclaim">By registering, you allow us to use your location and other details to find a job for you and thus agreeing to our terms and conditions.</label>
+                </div>
+            <input type="submit" class="submit">
+        </form>
+        
+    </div>
+</div>
+          <script src="/jsbt/bootstrap.bundle.js"></script>
+          <script src="/js/jobseeker.js"></script>
+</body>
+</html>

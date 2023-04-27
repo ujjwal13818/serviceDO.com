@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cssbt/bootstrap.css">
+    <link rel="stylesheet" href="/css/login.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loginbox">
+        <h1>Login Here</h1>
+        <form action="/login" method="post">
+            <label for="email/username">Email/Username</label>
+            <input type="email" name="username" placeholder="Enter Username or Email">
+            <label for="pass" class="password">Password</label>
+            <input type="password" name="password" placeholder="Enter Password">
+            <div class="captcha">
+                <label for="captcha-input">Enter Captcha</label>
+                <div class="preview"></div>
+                <div class="captcha-form">
+                    <input type="text" id="captcha" placeholder="Enter captcha text">
+                    <div id="cap" selectable = "false"></div>
+                    <button class="captcha-refresh" id="refresh" onClick="window.location.reload();">
+                        <i class="fa fa-refresh"></i>
+                    </button>
+                </div>
+            </div>
+            <input type="submit" id="submit" onclick="valid()"><br>
+            <a href="#">Forgot password?</a><br>
+            <a href="#">Dont have an account?</a>
+        </form>
+        <script src="/jsbt/bootstrap.bundle.js"></script>
+        <script src="/js/login.js"></script>
+    </div>
+</body>
+</html>
