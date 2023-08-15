@@ -1,43 +1,235 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .navbar{
-    height: 8vh;
+  height: 8vh;
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 .nav-content{
-    color: White;
-    font-size: 1.5rem;
-    display: flex;
-    width: 40%;
-    justify-content: space-around;
-    margin-left: auto;
-    margin-right: 0;
+  color: White;
+  font-size: 1.5rem;
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: 0;
 }
 a{
-    text-decoration: none;
-    color: White;
+  text-decoration: none;
+  color: White;
 }
 .logo>img{
-    height: 5vh;
-    width: 3vw;
+  height: 5vh;
+  width: 3vw;
 }
 .company{
-    font-size: 2rem;
-    font-weight: bold;
-    margin-left: 1vw;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 1vw;
 }
 .welcome{
-    color: white;
-    margin-top: 1vh;
-    font-size: 1.3rem;
-    margin-left: 2vw;
+  color: white;
+  margin-top: 1vh;
+  font-size: 1.3rem;
+  margin-left: 2vw;
 }
 a:hover{
-    color: black;
-    transform: scale(1.05);
+  color: black;
+  transform: scale(1.05);
 }
 .nav-link.active {
-    color: black;
-  }
+  color: black;
+}
+.container{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-right: .5vw;
+  padding-left: .5vw;
+  margin: 0;
+  margin-right: 0;
+}
+.job{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-right: .5vw;
+  padding-left: .5vw;
+  opacity: .2;
+  margin: 0;
+  margin-right: 0;
+}
+.left-utility{
+  height: 100vh;
+  width: 20vw;
+  background-color: rgb(237, 230, 230);
+  position: sticky;
+  top: 0vh;
+  z-index: -3;
+}
+.items-container{
+  height: auto;
+  width: 50vw;
+  color: Black;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+.eachJob{
+  width: 100%;
+  height: 35vh;
+}
+.cards{
+  width: 98%;
+  height: 30vh;
+  background-color: rgb(232, 240, 232);
+  color: black;
+  margin-top: 3vh;
+  padding: 1vh 1vw;
+  font-size: 1.4rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+.contact-btn{
+  float: right;
+  width: 10vw;
+  height: 5vh;
+  margin-right: 1.5vw;
+  margin-top: -6vh;
+  background-color: #493af2;
+  color: white;
+}
+.contact-btn:hover{
+  cursor: pointer;
+  background-color: green;
+  color: black;
+  font-size: larger;
+}
+.right-utility{
+  height: 100vh;
+  width: 20vw;
+  background-color: rgb(237, 230, 230);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0vh;
+  margin-right: -25vh;
+  flex-direction: column;
+}
+.post-job-button , .logout-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  margin-top: 8.5vh;
+  height: 7vh;
+  width: 10vw;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: sticky;
+  top: auto;
+  z-index: 5;
+  
+}
+.post-job-button:hover{
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+.logout-button{
+  margin-top: 2vh;
+}
+.logout-button:hover{
+  background-color: rgb(216, 216, 156);
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+.main-container {
+  top: -100%;
+  left: 0%;
+  right: 0%;
+  position: absolute;
+  width: 400px;
+  margin: 50px ;
+  padding: 20px;
+  background: linear-gradient(to bottom, #f2f5f8, #d9e2ec); /* Adjust gradient colors */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 1s ease-in-out;
+}
+.post {
+  top: 3vh;
+  left: 0%;
+  right: 0%;
+  position: absolute;
+  width: 600px;
+  margin: 50px auto;
+  padding: 20px; 
+  background: linear-gradient(to bottom, #f2f5f8, #d9e2ec); /* Adjust gradient colors */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(0%);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #555;
+}
+
+input, textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #d1d9e6;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff;
+}
+
+textarea {
+  resize: vertical;
+  padding: 10px;
+  border: 1px solid #d1d9e6;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+  background: linear-gradient(to bottom, #f2f5f8, #d9e2ec); /* Gradient background */
+}
+.postjob {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.postjob:hover {
+  background-color: #0056b3;
+}

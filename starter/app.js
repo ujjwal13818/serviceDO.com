@@ -2,6 +2,7 @@ require('dotenv').config();
 require("mongoose");
 const express = require("express");
 const app = express();
+const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const employerData = require('./models/employer');
@@ -9,6 +10,8 @@ const seekerData = require('./models/jobseeker');
 const port = 3000;
 const connectDB = require('./db/connect')
 const ejs = require("ejs");
+const exp = require('constants');
+const session = require('express-session');
 const check = (req , res)=>{
     res.send(`hello`);
 }
@@ -16,19 +19,25 @@ app.use(express.static(path.join(__dirname , 'public')));
 app.use(express.json());
 app.set('view engine' , 'ejs');
 app.use(express.urlencoded({extended:false}))
-
+app.use(session({
+    secret: 'your-secret-key',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      maxAge: 120 * 60 * 1000, // 30 minutes (in milliseconds)
+    }
+  }));
+  
 
 //making storage where to store resumes.
- var file_name = "";
 const storage = multer.diskStorage({
-    destination: function(req , file , cb){
-        cb(null , path.join(__dirname , './public/uploads'));
+    destination: function(req , resume , cb){
+        cb(null , path.join(__dirname , '../starter/public/uploads'));
     },
-    filename: function(req , file , cb){
-        cb(null , Date.now() + file.originalname);
-         file_name = Date.now() + file.originalname
+    filename: function(req , resume , cb){
+        cb(null , Date.now() + resume.originalname);
     }
-})
+}) 
 
 const upload = multer({storage:storage});
 
@@ -61,25 +70,26 @@ app.get('/profile' , (req,res)=>{
     seekerData.find({email}).then(data => {
         if(data){
             res.render("profile" , {
-                userdata : data
+                userdata : data,
+                filename : data.resume
             })
         }
     })
 }) 
 
-app.get('/home' , (req,res) =>{
-    seekerData.find({email}).then(data => {
-        if(data){
-            res.render("home" , {
-                userdata : data
-            })
-        }
-    })
+app.get('/home' , async (req,res) =>{
+    const whom = await seekerData.find({email});
+    const allJobs = await employerData.find({});
+    if(whom){
+        res.render("home" , {
+            whom , allJobs
+        })
+    }
 })
 
 //form post
 
-app.post('/employer' , async(req,res)=>{
+app.post('/home' , async(req,res)=>{
      try{
         const data = {
             id : req.sessionID,
@@ -87,16 +97,11 @@ app.post('/employer' , async(req,res)=>{
             email:req.body.email,
             address:req.body.address,
             phone:req.body.phone,
-            quantity:req.body.quantity,
-            password:req.body.password,
-            cpassword:req.body.cpassword,
-            skills:req.body.skills,
-            salary:req.body.salary,
-            gender:req.body.gender
+            description:req.body.description,
         }
        await employerData.insertMany([data]);
     
-       res.redirect("http://localhost:3000/login")   
+       res.redirect(req.get('referer'));  
      } 
      catch(err){
         console.log(err);
@@ -114,9 +119,9 @@ app.post('/jobseeker' , upload.single('resume'), async(req,res)=>{
            address:req.body.address,
            phone:req.body.phone,
            skills:req.body.skills,
-           resume: file_name,
+           resume: req.file.filename,
            radio : req.body.radio,
-           permission: req.body.checkbox,
+           permission: req.body.checkbox, 
        }
       await seekerData.insertMany([seekdata])
        res.redirect("http://localhost:3000/login") 
@@ -156,7 +161,7 @@ app.post("/edit" , upload.single('resume') , async(req ,res) => {
            email:req.body.email,
            address:req.body.address,
            phone:req.body.phone,
-           resume: file_name,
+           resume: req.file.filename,
           }
           await seekerData.findOneAndUpdate(_id , updatedData);
           res.redirect("http://localhost:3000/profile");

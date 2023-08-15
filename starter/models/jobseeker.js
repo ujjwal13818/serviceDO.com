@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const seekerschema = new mongoose.Schema({
   id:{
-    type : Number,
+    type : String,
     trim : true,
 },
     fname: {
@@ -42,7 +42,6 @@ const seekerschema = new mongoose.Schema({
    },
   resume: {
     type: String,
-    required: true,
     trim: true,
   },
   radio:{

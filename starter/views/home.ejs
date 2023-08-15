@@ -9,16 +9,15 @@
     <link rel="stylesheet" href="/css/home.css" />
     </head>
 <body>
-    
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="padding-left: 2rem; font-size: larger;">
         <div class="logo">
             <img src="/images/Screenshot (870).png" alt="">
         </div>
         <div class="company">serviceDO.com</div>
         <div class="welcome">
-            <%userdata.forEach(data => {%>
-                <p class="welcome">Welcome <%= data.fname %></p>
-            <%})%>
+          <% whom.forEach(user => { %>
+            <p class="welcome">Welcome <%= user.fname %></p>
+          <% }); %>   
         </div>
           <div class="nav-content">
             <a class="nav-link active" href="#">Home</a>
@@ -28,6 +27,55 @@
             <a class="nav-link" href="#">Contact us</a>
           </div>
       </nav>
+      <div class="container" id="main">
+        <div class="left-utility">
+            
+        </div>
+        <div class="items-container">
+          <% allJobs.forEach(job => { %>
+            <div class="eachJob">
+              <div class="cards">
+                 Hi there!! Myself, <%= job.name %> from <%= job.address %>. <br>
+                 I am stuck with the following work: <br>
+                 Job description : <%= job.description %> <br>
+                 Job location : <%= job.address %> <br>
+                 For more information, contact me.
+              </div>
+              <div class="apply">
+                   <button class="contact-btn">Contact</button>
+              </div>
+            </div>
+          <% }); %>   
+         
+          
+           
+        </div>
+        <div class="right-utility">
+            <button class="post-job-button" id="post-button">Post a Job</button>
+            <button class="logout-button" id="post-button"><a href="http://localhost:3000/">Log Out</a></button>
+        </div>   
+      </div>
+      <div class="main-container " id="contain">
+        <h1>Add a new job</h1>
+        <form action="/home" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" required>
+          
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+          
+          <label for="description">Description:</label>
+          <textarea id="description" inputmode="String" name="description" rows="4" required></textarea>
+          
+          <button type="submit" class="postjob">Submit</button>
+        </form>
+      </div>
     <script src="/jsbt/bootstrap.bundle.js"></script>
     <script src="/js/home.js"></script>
 </body>

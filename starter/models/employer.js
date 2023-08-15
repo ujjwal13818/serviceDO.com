@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 const employerschema = new mongoose.Schema({
     id:{
-        type : Number,
+        type : String,
         trim : true,
     },
-    name: {
+    name : {
         type: String,
         required: [true , "must provide name"],
         trim : true,
@@ -19,36 +19,15 @@ const employerschema = new mongoose.Schema({
         required:[true , "must provide your address"],
         trim : true,
     },
-    phone:{
+    phone : {
         type: Number,
-        required:[true , "provide your phone number"],
+        required:false,
         trim:true,
     },
-    quantity:{
-        type: Number,
-        required: true,
-        trim:true,
-    },
-   password:{
-    type: String,
-    required : true,
-   },
-   cpassword:{
-    type: String,
-    required : true,
-   },
-   skills: {
+   description : {
     type: String,
     required: true,
     trim: true,
    },
-   salary: {
-    type: Number,
-    required: false,
-   },
-   gender: {
-    type: String,
-    possibleValues: ['Male' , 'Female' , 'Other'],
-   }
 });
 module.exports = mongoose.model("employerData" , employerschema);
