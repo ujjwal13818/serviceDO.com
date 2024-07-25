@@ -96,6 +96,8 @@ body, html {
 .bn {
   margin-top: 10px;
   text-align: center;
+  display: flex;
+    justify-content: space-between;
 }
 
 .bn button {

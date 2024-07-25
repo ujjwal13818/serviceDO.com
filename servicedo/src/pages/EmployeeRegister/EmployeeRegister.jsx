@@ -15,6 +15,7 @@ const EmployeeRegister = () => {
     
     gender: '',
   });
+  const [error , setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,6 +28,16 @@ const EmployeeRegister = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add form submission logic here
+    if (form.password.length < 5) {
+      setError('Password must be at least 5 characters long.');
+      return;
+    }
+
+    // Validate confirm password
+    if (form.password !== form.cpassword) {
+      setError('Passwords do not match.');
+      return;
+    }
     console.log(form);
   };
 
@@ -38,7 +49,7 @@ const EmployeeRegister = () => {
       <h2>ServiceDo</h2>
       </div>
       <div className="form-container">
-        <h1 className="title text-center py-4">Register For Free</h1>
+        <h1 className="title text-center py-4">Employee Register </h1>
         <form onSubmit={handleSubmit}>
           <div className="content">
             <div className="input-box">
@@ -86,6 +97,9 @@ const EmployeeRegister = () => {
                 required
               />
             </div>
+            <div className="error">
+              {error}
+            </div>
             <div className="input-box">
               <label htmlFor="address">Address</label>
               <input
@@ -110,7 +124,7 @@ const EmployeeRegister = () => {
             </div>
            
             <div className="input-box">
-        <label htmlFor="skills">Skill required</label>
+        <label htmlFor="skills">Skills</label>
         <select
             name="skills"
             id="skills"
@@ -119,11 +133,17 @@ const EmployeeRegister = () => {
             required
         >
             <option value="" disabled selected>Select the skills required</option>
-            <option value="plumber">Plumber</option>
-            <option value="gardener">Gardener</option>
-            <option value="mechanic">Mechanic</option>
-            <option value="mechanic">Maid</option>
-            <option value="mechanic">Electrician</option>
+            <option value="Carpentary">Carpentary</option>
+            <option value="Private Teacher">Private Teacher</option>
+            <option value="Mason">Mason</option>
+            <option value="Plumber">Plumber</option>
+            <option value="Labourer">Labourer</option>
+            <option value="Car driver">Car driver</option>
+            <option value="Painter">Painter</option>
+            <option value="Electrician">Electrician</option>
+            <option value="Others">Others</option>
+
+
         </select>
     </div>
             
@@ -156,7 +176,10 @@ const EmployeeRegister = () => {
             </div>
 
             <div className="bn">
+            <h5>Already have an account?  <span>Login</span></h5>
+               
               <button type="submit">
+                
                 <h3>Register Now</h3>
               </button>
             </div>

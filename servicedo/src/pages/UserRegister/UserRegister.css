@@ -9,7 +9,7 @@ body, html {
   }
   
   .background-containe{
-    margin-top: 0px;
+    margin-top: -550px;
     font-size: 40px;
     color: rgb(2, 83, 2);
     background-color: rgb(218 226 218);; /* Light blue color */
@@ -30,7 +30,7 @@ body, html {
     align-items: center;
     height: 120vh;
     width: 100%;
-    margin-top: 0px;
+    margin-top: -50px;
   }
   
   .form-container {
@@ -96,7 +96,10 @@ body, html {
   .bn {
     margin-top: 10px;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
   }
+
   
   .bn button {
     background-color: rgb(209, 104, 47);;
@@ -111,3 +114,8 @@ body, html {
     background-color: rgb(2, 83, 2);;
   }
   
+  .error{
+    font-size: 0.8rem;
+    color: red;
+    margin-bottom: 2px;
+  }
