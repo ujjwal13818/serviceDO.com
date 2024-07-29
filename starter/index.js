@@ -1,10 +1,12 @@
 import express from "express";
 import { connectDb } from "./DataBase/ConnectDb.js";
 import registerRoutes from "./Routes/Register.js";
+import cors from "cors"
 
 const app = express();
 
 app.use(express.json()); // converts requested data from json to javascript object;
+app.use(cors());
 
 //routes
 app.use("/auth", registerRoutes);

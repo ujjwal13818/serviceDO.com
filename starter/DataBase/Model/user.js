@@ -15,6 +15,10 @@ const userSchema = new mongoose.Schema({
     required: true,
     minlength: 5,
   },
+  phoneNo: {
+    type: Number,
+    required: true,
+  },
   dob: {
     type: Date,
     required: true,
@@ -23,6 +27,11 @@ const userSchema = new mongoose.Schema({
         return new Date() > value;
       },
     },
+  },
+  gender: {
+    type: String,
+    enum: ["Male", "Female", "Other"],
+    required: true,
   },
   address: {
     type: String,
