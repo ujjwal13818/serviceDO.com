@@ -1,0 +1,184 @@
+/* Specific container to avoid global styles */
+.signin-body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Arial', sans-serif;
+    background-color: azure;
+  }
+  
+  .signin-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-left: 540px;
+    margin-top: 110px;
+  }
+  
+  .servicedo-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .servicedo-container h1 {
+    font-size: 36px;
+    color: #007BFF;
+    background: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .signin-container {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .signin-form {
+    padding: 30px;
+  }
+  
+  .signin-title {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .input-group input:focus {
+    border-color: #125a27;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  }
+  
+  .captcha-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .captcha-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #c3cfe2;
+  }
+  
+  .captcha-container img {
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(191, 140, 140, 0.1);
+  }
+  
+  .captcha-container input {
+    width: calc(100% - 70px);
+  }
+  
+  .signin-button {
+    width: 100%;
+    padding: 12px;
+    background: rgb(48, 150, 87);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .signin-button:hover {
+    background: linear-gradient(45deg, #63680a, #00aaff);
+  }
+  
+  
+  
+  
+  .register-options {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .register-options p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .register-option {
+    display: inline-block;
+    margin: 0 10px;
+    color: #85a357;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .register-option:hover {
+    color: #0056b3;
+  }
+  .signin-title {
+    margin-bottom: 20px;
+  }
+  
+  .role-selection {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+  
+  .role-selection label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .role-selection input {
+    margin-right: 8px;
+  }
+  
