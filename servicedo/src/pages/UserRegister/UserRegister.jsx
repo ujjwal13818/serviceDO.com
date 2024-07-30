@@ -1,20 +1,23 @@
-import React from 'react'
-import { useState } from 'react';
-import './UserRegister.css'
+import React from "react";
+import { useState } from "react";
+import "./UserRegister.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const UserRegister = () => {
+  const navigate = useNavigate();
+
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    password: '',
-    cpassword: '',
-    address: '',
-    phonenumber: '',
-    dateofbirth:'',
-    
-    gender: '',
+    name: "",
+    email: "",
+    password: "",
+    cpassword: "",
+    address: "",
+    phonenumber: "",
+    dateofbirth: "",
+    gender: "",
   });
-  const [error , setError] = useState("");
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,34 +25,44 @@ const UserRegister = () => {
       ...form,
       [name]: value,
     });
-    setErrors({
-      ...errors,
-      [name]: '',
-    });
-   
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add form submission logic here
     if (form.password.length < 5) {
-      setError('Password must be at least 5 characters long.');
+      setError("Password must be at least 5 characters long.");
       return;
     }
 
-    // Validate confirm password
     if (form.password !== form.cpassword) {
-      setError('Passwords do not match.');
+      setError("Passwords do not match.");
       return;
     }
-    console.log(form);
+    //call register api
+    try {
+      const response = await axios.post(
+        "http://localhost:7777/auth/userregister",
+        {
+          fullName: form.name,
+          email: form.email,
+          password: form.password,
+          phoneNo: form.phonenumber,
+          dob: form.dateofbirth,
+          gender: form.gender,
+          address: form.address,
+        }
+      );
+      alert(response.data.message);
+      navigate("/Sign_in");
+    } catch (error) {
+      console.log("error in sending userRegister data:" + error);
+      alert("Something went wrong");
+    }
   };
   return (
-   
-
     <div className="background-container">
       <div className="background-containe">
-      <h2>ServiceDo</h2>
+        <h2>ServiceDo</h2>
       </div>
       <div className="form-container">
         <h1 className="title text-center py-4">User Register</h1>
@@ -77,7 +90,7 @@ const UserRegister = () => {
                 required
               />
             </div>
-            
+
             <div className="input-box">
               <label htmlFor="password">Set Password</label>
               <input
@@ -100,9 +113,7 @@ const UserRegister = () => {
                 required
               />
             </div>
-            <div className="error">
-              {error}
-            </div>
+            <div className="error">{error}</div>
             <div className="input-box">
               <label htmlFor="address">Address</label>
               <input
@@ -137,39 +148,38 @@ const UserRegister = () => {
                 required
               />
             </div>
-           
-            
-            
 
             <div className="gender-category">
-            <label htmlFor="gender">Gender :</label>
-            <select
-            name="gender"
-            id="gender"
-            value={form.gender}
-            onChange={handleChange}
-            required
-        >
-            <option value="" disabled selected>Select the Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-            
-        </select>
-              
+              <label htmlFor="gender">Gender :</label>
+              <select
+                name="gender"
+                id="gender"
+                value={form.gender}
+                onChange={handleChange}
+                required
+              >
+                <option value="" disabled selected>
+                  Select the Gender
+                </option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
 
             <div className="alert">
               <p>
-                By clicking Register, you agree to SERVICE DO's{' '}
-                <a href="a">Terms</a>, <a href="a">Privacy policy</a>, and{' '}
-                <a href="a">Cookies policy</a>. You will soon receive notifications
-                from our side.
+                By clicking Register, you agree to SERVICE DO's{" "}
+                <a href="a">Terms</a>, <a href="a">Privacy policy</a>, and{" "}
+                <a href="a">Cookies policy</a>. You will soon receive
+                notifications from our side.
               </p>
             </div>
 
             <div className="bn">
-            <h5>Already have an account?  <span>Login</span></h5>
+              <h5>
+                Already have an account? <span>Login</span>
+              </h5>
               <button type="submit">
                 <h3>Register Now</h3>
               </button>
@@ -181,4 +191,4 @@ const UserRegister = () => {
   );
 };
 
-export default UserRegister
+export default UserRegister;

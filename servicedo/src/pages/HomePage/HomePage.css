@@ -1,4 +1,4 @@
-.app {
+/* .app {
     display: flex;
   }
   
@@ -6,7 +6,7 @@
     width: 20%;
     background-color: #f4f4f4;
     padding: 20px;
-    border-right: 2px solid #ccc; /* Add vertical line at the end of the sidebar */
+    border-right: 2px solid #ccc; 
   }
   
   .sidebar h2 {
@@ -36,9 +36,9 @@
   .main-content {
     width: 70%;
     padding: 20px;
-    margin-left: 20px; /* Adjust this value as needed */
-    text-align: center; /* Center the heading */
-    border-right: 2px solid #ccc; /* Add vertical line before the Premium section */
+    margin-left: 20px; 
+    text-align: center; 
+    border-right: 2px solid #ccc; 
   }
   
   .main-content h2 {
@@ -92,4 +92,4 @@
     color: red;
     transform: scale(1.1);
   }
-  
+   */

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-
+import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 import './EmployeeRegister.css';
 
 const EmployeeRegister = () => {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -25,7 +27,7 @@ const EmployeeRegister = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     // Add form submission logic here
     if (form.password.length < 5) {
@@ -38,7 +40,27 @@ const EmployeeRegister = () => {
       setError('Passwords do not match.');
       return;
     }
-    console.log(form);
+    // console.log(form);
+     try {
+      const response = await axios.post(
+        "http://localhost:7777/auth/employeeregister",
+        {
+          fullName: form.name,
+          email: form.email,
+          password: form.password,
+          phoneNo: form.phonenumber,
+          skill: form.skills,
+          experience: form.experience,
+          address: form.address,
+        }
+      );
+      alert(response.data.message)
+      navigate("/Sign_in");
+
+    } catch (error) {
+      console.log("error in sending userRegister data:" + error);
+      alert("Something went wrong");
+    }
   };
 
   return (
@@ -134,7 +156,7 @@ const EmployeeRegister = () => {
         >
             <option value="" disabled selected>Select the skills required</option>
             <option value="Carpentary">Carpentary</option>
-            <option value="Private Teacher">Private Teacher</option>
+            <option value="Private teacher">Private Teacher</option>
             <option value="Mason">Mason</option>
             <option value="Plumber">Plumber</option>
             <option value="Labourer">Labourer</option>

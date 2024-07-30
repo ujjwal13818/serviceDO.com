@@ -46,11 +46,6 @@ const employeeSchema = new mongoose.Schema(
       type: Number,
       min: 0,
     },
-    gender: {
-      type: String,
-      enum: ["Male", "Female", "Other"],
-      required: true,
-    },
   },
   { timestamps: true }
 );
