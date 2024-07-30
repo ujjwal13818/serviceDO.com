@@ -1,39 +1,39 @@
-/* .app {
+.SPHapp {
     display: flex;
   }
   
-  .sidebar {
+  .SPHsidebar {
     width: 20%;
     background-color: #f4f4f4;
     padding: 20px;
     border-right: 2px solid #ccc; 
   }
   
-  .sidebar h2 {
+  .SPHsidebar h2 {
     margin-bottom: 20px;
   }
   
-  .sidebar ul {
+  .SPHsidebar ul {
     list-style-type: none;
     padding: 0;
   }
   
-  .sidebar ul li {
+  .SPHsidebar ul li {
     margin-bottom: 10px;
     transition: color 0.3s, transform 0.3s;
   }
   
-  .sidebar ul li:hover {
+  .SPHsidebar ul li:hover {
     color: red;
     transform: scale(1.1);
   }
   
-  .content {
+  .SPHcontent {
     display: flex;
     width: 80%;
   }
   
-  .main-content {
+  .SPHmain-content {
     width: 70%;
     padding: 20px;
     margin-left: 20px; 
@@ -41,13 +41,13 @@
     border-right: 2px solid #ccc; 
   }
   
-  .main-content h2 {
+  .SPHmain-content h2 {
     animation: blink 1s infinite;
     display: inline-block;
     position: relative;
   }
   
-  .main-content h2::after {
+  .SPHmain-content h2::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -74,13 +74,13 @@
     100% { background-color: red; }
   }
   
-  .premium-section {
+  .SPHpremium-section {
     width: 30%;
     padding: 20px;
     background-color: #e0e0e0;
   }
   
-  .premium-box {
+  .SPHpremium-box {
     margin-bottom: 10px;
     padding: 10px;
     background-color: #fff;
@@ -88,8 +88,8 @@
     transition: color 0.3s, transform 0.3s;
   }
   
-  .premium-box:hover {
+  .SPHpremium-box:hover {
     color: red;
     transform: scale(1.1);
   }
-   */
+  

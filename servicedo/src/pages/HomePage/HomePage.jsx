@@ -4,8 +4,8 @@ import './HomePage.css'
 const HomePage = () => {
   return (
     <>
-        <div className="app">
-      <div className="sidebar">
+        <div className="SPHapp">
+      <div className="SPHsidebar">
         
         <ul>
           <li>Home</li>
@@ -14,17 +14,17 @@ const HomePage = () => {
           <li>Logout</li>
         </ul>
       </div>
-      <div className="content">
-        <div className="main-content">
+      <div className="SPHcontent">
+        <div className="SPHmain-content">
           <h2>RECENT JOBS</h2>
           {/* Add content here */}
         </div>
-        <div className="premium-section">
+        <div className="SPHpremium-section">
           
-          <div className="premium-box">Post</div>
-          <div className="premium-box">HISTORY</div>
-          <div className="premium-box">CHAT</div>
-          <div className="premium-box">Premium</div>
+          <div className="SPHpremium-box">Post</div>
+          <div className="SPHpremium-box">HISTORY</div>
+          <div className="SPHpremium-box">CHAT</div>
+          <div className="SPHpremium-box">Premium</div>
         </div>
       </div>
     </div>
