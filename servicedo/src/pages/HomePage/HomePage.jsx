@@ -2,9 +2,13 @@ import React from 'react'
 import './HomePage.css'
 import {loadStripe} from '@stripe/stripe-js'
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 
 const HomePage = () => {
-
+  const navigate = useNavigate();
+  const goToProfileSection = () =>{
+    navigate("/profile");
+  }
   const makePayment = async() => {
     const stripe = await loadStripe(
       "pk_test_51PiIkgJ59zhrSaEwen7ET3w7ay8EE2kFkpWHhMvBaC2EnK9uT4psGX3JQOJ0mMg6tUJ8xps2E47rsoagMKupMhqH00rUnZVSuT"
@@ -53,7 +57,7 @@ const HomePage = () => {
         <div className="SPHpremium-section">
           
           <div className="SPHpremium-box">Post</div>
-          <div className="SPHpremium-box">HISTORY</div>
+          <div className="SPHpremium-box" onClick={goToProfileSection}>Profile </div>
           <div className="SPHpremium-box">CHAT</div>
           <div className="SPHpremium-box" onClick={makePayment}>Premium</div>
         </div>
