@@ -41,7 +41,6 @@ const Sign_in = () => {
         email: email,
         password: password,
       });
-      console.log(response);
       if (response.data.success) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("_id" , response.data.fetchedUser._id);
