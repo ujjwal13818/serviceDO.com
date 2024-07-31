@@ -1,1 +1,100 @@
-/* class naming :- SPPcontainer , do not use tag name */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.SPP-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    background-image: url('/public/pink-blue.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.SPP-profile-card {
+    background-color: #800080;
+    width: 500px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: SPP-fadeIn 1s ease-out;
+}
+
+.SPP-profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ffffff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.SPP-profile-avatar:hover {
+    transform: scale(1.1);
+}
+
+.SPP-profile-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.SPP-profile-info {
+    margin-top: 20px;
+}
+
+.SPP-profile-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.SPP-profile-item:last-child {
+    border-bottom: none;
+}
+
+.SPP-profile-label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #cccccc;
+}
+
+.SPP-profile-value {
+    color: #ffffff;
+}
+
+.SPP-cv-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.SPP-cv-link:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+@keyframes SPP-fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
