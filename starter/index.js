@@ -1,6 +1,7 @@
 import express from "express";
 import { connectDb } from "./DataBase/ConnectDb.js";
 import registerRoutes from "./Routes/Register.js";
+import premiumRoutes from "./Routes/Premium.js"
 import cors from "cors"
 
 const app = express();
@@ -10,6 +11,7 @@ app.use(cors());
 
 //routes
 app.use("/auth", registerRoutes);
+app.use("/premium", premiumRoutes);
 
 
 const PORT = process.env.PORT || 7777;
