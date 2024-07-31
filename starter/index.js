@@ -22,8 +22,9 @@ const start = async () => {
     await connectDb();
     app.listen(PORT , () => {
       console.log(
-        `Database is connected successfully and server is running at port: ${process.env.PORT}`
+        `Database Connected successfully. Server running on ${process.env.MODE} mode, port no ${process.env.PORT}`
       );
+      
     });
   } catch (error) {
     console.log(error);
