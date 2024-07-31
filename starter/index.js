@@ -4,6 +4,7 @@ import registerRoutes from "./Routes/Register.js";
 import premiumRoutes from "./Routes/Premium.js"
 import postRoutes from "./Routes/post.js"
 import cors from "cors"
+import colors from 'colors';
 
 const app = express();
 
@@ -22,12 +23,12 @@ const start = async () => {
     await connectDb();
     app.listen(PORT , () => {
       console.log(
-        `Database Connected successfully. Server running on ${process.env.MODE} mode, port no ${process.env.PORT}`
+        `Database Connected successfully. Server running on ${process.env.MODE} mode, port no ${process.env.PORT}`.bgCyan.white
       );
       
     });
   } catch (error) {
-    console.log(error);
+    console.log(error.bgRed);
   }
 };
 
