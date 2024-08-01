@@ -1,10 +1,13 @@
 .SPHapp {
     display: flex;
+background: linear-gradient(45deg, #ff69b4, #add8e6);
+min-height: 100vh;
   }
   
   .SPHsidebar {
     width: 20%;
-    background-color: #f4f4f4;
+    display: none;
+    /* background-color: #f4f4f4; */
     padding: 20px;
     border-right: 2px solid #ccc; 
   }
@@ -32,34 +35,39 @@
   .SPHcontent {
     display: flex;
     width: 80%;
+    margin-left: 20vw;
   }
   
   .SPHmain-content {
     width: 70%;
     padding: 20px;
-    margin-left: 20px; 
-    text-align: center; 
+    /* margin-left: 20px;  */
     border-right: 2px solid #ccc; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
   
   .SPHmain-content h2 {
-    animation: blink 1s infinite;
-    display: inline-block;
+    /* animation: blink 1s infinite; */
+    /* display: inline-block; */
     position: relative;
+  
   }
   
-  .SPHmain-content h2::after {
+  /* .SPHmain-content h2::after {
     content: '';
     position: absolute;
     width: 100%;
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: red;
-    animation: blink-underline 1s infinite;
-  }
+    /* background-color: red; */
+    /* animation: blink-underline 1s infinite; */
+  /* } */ */
   
-  @keyframes blink {
+  /* @keyframes blink {
     0% { color: red; }
     25% { color: blue; }
     50% { color: green; }
@@ -73,12 +81,14 @@
     50% { background-color: green; }
     75% { background-color: yellow; }
     100% { background-color: red; }
-  }
+  } */
   
   .SPHpremium-section {
     width: 30%;
     padding: 20px;
-    background-color: #e0e0e0;
+    /* background-color: #e0e0e0; */
+    /* position: fixed; */
+    display: none;
   }
   
   .SPHpremium-box {
@@ -94,4 +104,9 @@
     transform: scale(1.1);
     cursor: pointer;
   }
-  
+  .SPHheading{
+    text-align: center;
+    position: absolute;
+    color: red;
+    font-size: 1.8rem;
+  }

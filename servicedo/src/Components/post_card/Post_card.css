@@ -1,87 +1,100 @@
 .post-card-container-custom {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-    padding-top: 20px;
-  }
-  
-  .post-card-custom {
-    width: 600px;
-    padding: 20px;
-    border: 2px solid #0e0e0f;
-    border-radius: 12px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #b6d8cc 0%, #e6a696 100%);
-    box-sizing: border-box;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-  
-  .post-card-custom:hover {
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
-    transform: translateY(-5px);
-  }
-  
-  .post-card-title-custom {
-    text-align: center;
-    margin-bottom: 21px;
-    margin-top: 1px;
-    font-size: 26px;
-    font-weight: bold;
-    color: #0e0e0f;
-  }
-  
-  .post-card-content-custom {
-    margin-bottom: 20px;
-  }
-  
-  .post-card-item-custom {
-    margin-bottom: 20px;
-    font-size: 18px;
-  }
-  
-  .post-card-label-custom {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .post-card-value-custom {
-    margin-left: 10px;
-  }
-  
-  .post-card-actions-custom {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .contact-button-custom,
-  .apply-button-custom {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .contact-button-custom {
-    background-color: #28a745;
-    color: white;
-  }
-  
-  .contact-button-custom:hover {
-    background-color: #218838;
-    transform: scale(1.05);
-  }
-  
-  .apply-button-custom {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .apply-button-custom:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.post-card-custom {
+  width: 700px;
+  padding: 20px;
+  border: 2px solid #0e0e0f;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #b6d8cc 0%, #e6a696 100%);
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.post-card-custom:hover {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.post-card-title-custom {
+  text-align: center;
+  margin-bottom: 21px;
+  margin-top: 1px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #0e0e0f;
+}
+
+.post-card-content-custom {
+  margin-bottom: 20px;
+}
+
+.post-card-item-custom {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.post-card-label-custom {
+  font-weight: bold;
+  color: #333;
+}
+
+.post-card-value-custom {
+  margin-left: 10px;
+}
+
+.post-card-actions-custom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-button-custom,
+.apply-button-custom {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button-custom {
+  background-color: #28a745;
+  color: white;
+}
+
+.contact-button-custom:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.apply-button-custom {
+  background-color: #007bff;
+  color: white;
+}
+
+.apply-button-custom:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.SCPCheadandlabel {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.SCPlabel {
+  display: inline-block;
+  padding: 5px 10px;
+  height: 15px;
+  color: white; /* White text */
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+}

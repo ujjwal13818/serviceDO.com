@@ -11,8 +11,8 @@ const router = express.Router();
 router.post("/employeeregister", employeeRegisterController);
 router.post("/userregister" , userRegisterController);
 router.post("/login" , loginController)
-router.get("/getuser" , verifyToken , getUser);
-router.get("/getemployee", verifyToken, getEmployee);
+router.get("/getuser"  , getUser);
+router.get("/getemployee", getEmployee);
 
 
 export default router;

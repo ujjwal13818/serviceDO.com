@@ -1,0 +1,65 @@
+.SCPcontainer-left{
+    height: 100%;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    border-right: 1px solid white;
+}
+.SCPcontainer-right{
+    height: 100%;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-left: 85vw;
+    margin-top: 8vh;
+}
+.SCPnav-l{
+    width: 90%;
+    height: 7vh;
+    margin-top: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10vh;
+    border-bottom-right-radius: 10vh;
+    font-size: 1.3rem;
+    box-shadow: 0px 4px 8px rgba(203, 47, 47, 0.6);
+    cursor: pointer;
+    margin-left: -50px;
+    color: rgb(21, 18, 18);
+    background: linear-gradient(45deg, #b0e57c, #f9f871);
+
+}
+.SCPnav-l:hover{
+    transform: translateX(20px);
+    transition: all .1s ease-in-out;
+    color: red;
+}
+.SCPnav-r{
+    width: 90%;
+    height: 7vh;
+    margin-top: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10vh;
+    border-bottom-left-radius: 10vh;
+    font-size: 1.3rem;
+    box-shadow: 0px 4px 8px rgba(83, 47, 203, 0.6);
+    cursor: pointer;
+    margin-right: 50px;
+    color: rgb(21, 18, 18);
+    background: linear-gradient(45deg, #b3716d, #71f9e0);
+
+}
+.SCPnav-r:hover{
+    transform: translateX(-20px);
+    transition: all .1s ease-in-out;
+    color: red;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

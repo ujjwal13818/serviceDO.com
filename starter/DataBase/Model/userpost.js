@@ -6,7 +6,8 @@ const postSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId, //to be fill from frontend
       ref: "UserDb",
     },
-    fullName: { // to be filled from frontend
+    fullName: {
+      // to be filled from frontend
       type: String,
       required: true,
     },
@@ -39,6 +40,11 @@ const postSchema = new mongoose.Schema(
       enum: ["active", "accepted", "requested", "not-active"],
       default: "active",
     },
+    requestedBy: [
+      {
+        type: String,
+      },
+    ],
   },
   { timestamps: true }
 );

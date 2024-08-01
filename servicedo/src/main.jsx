@@ -11,6 +11,7 @@ import Post from "./Components/post/Post.jsx";
 import Post_card from "./Components/post_card/Post_card.jsx"
 
 import Profile from "./pages/Profile/Profile.jsx";
+import Myposts from "./pages/MyPosts/Myposts.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -31,7 +32,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/post" element={<Post />} />
         <Route path="/post_card" element={<Post_card />} />
         <Route path="/profile" element={<Profile />} />
-
+        <Route path="/my-posts" element={<Myposts />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

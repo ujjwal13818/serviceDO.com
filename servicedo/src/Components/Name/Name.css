@@ -1,0 +1,24 @@
+  .user-label {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #c797af, #add8e6);
+            color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.6);
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            font-size: large;
+            display: flex;
+        }
+        .user-tag{
+            margin-left: 10px;
+            font-size: 12px;
+            color: #f80404;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: rgb(213, 250, 139);
+            height: fit-content;
+        }

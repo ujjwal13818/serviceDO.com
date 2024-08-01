@@ -46,6 +46,7 @@ const Sign_in = () => {
         localStorage.setItem("_id" , response.data.fetchedUser._id);
         localStorage.setItem("fullName", response.data.fetchedUser.fullName);
         localStorage.setItem("email", response.data.fetchedUser.email);
+        localStorage.setItem("role", role);
         alert(response.data.message);
         navigate("/home");
       }
