@@ -1,0 +1,43 @@
+.votpcontainer{
+    margin-right: -20vw;
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.votpinputtext{
+    margin-bottom: 1vw;
+    outline: none;
+}
+.votpmaintext{
+    color: red;
+    font-size: 1.2rem;
+    outline: none;
+    margin-bottom: 1vw;
+}
+.votpmaintext:focus{
+    outline: none;
+}
+.otpinput{
+    width: 10vw;
+    height: 5vh;
+    border: 2px solid blue;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.votpbtn{
+}
+.subotp{
+    width: 6vw;
+    height: 5vh;
+    font-size: larger;
+    background-color: rgb(34, 93, 112);
+    color: white;
+    cursor: pointer;
+
+}
+.subotp:hover{
+    background-color: rgb(35, 77, 67);
+}
