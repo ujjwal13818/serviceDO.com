@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1> jfhkdjhd</h1>
+      <h1> Welcome to ServiceDo,Feel free to signup or login into our website for job oppurtunies and job providing.</h1>
     </>
   )
 }

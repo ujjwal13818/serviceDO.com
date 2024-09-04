@@ -7,7 +7,7 @@ export const postController = async(req , res) => {
         res.status(200).json({
             success: true,
             message: "Job posted successfully",
-            post
+            post  // returns the post to the client.
         });
     } catch (error) {
         console.log("Error at post controller: " + error);
