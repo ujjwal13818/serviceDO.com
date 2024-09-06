@@ -20,7 +20,7 @@ router.get("/getemployee", getEmployee);
 var otpEntered ;
 
 router.post("/sendVerificationCode", async (req, res) => {
- var otp = Math.floor(Math.random() * 100001);
+  var otp = Math.floor(100000 + Math.random() * 900000);
  otpEntered = otp;
   const { fullName, email } = req.body;
   let testAccount = await nodemailer.createTestAccount();
